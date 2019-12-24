@@ -48,7 +48,8 @@ class App extends Component {
 
   render () {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
+      color: 'white',
       font: 'inherit',
       border: '1px solid blue',
       padding: '8px',
@@ -68,9 +69,9 @@ class App extends Component {
               key={person.id} 
               changed={(event) => this.nameChangedHandler(event, person.id)}/>
             })}
-          </div>
-      
+          </div>   
         );
+        style.backgroundColor = 'red';
     }
 
     return (
@@ -78,8 +79,8 @@ class App extends Component {
         <h1>Hi, I'm a React App</h1>
         <p>This is really working</p>
         <button 
-        style={style}
-        onClick={this.togglePersonsHandler}>Toggle Persons</button>
+          style={style}
+          onClick={this.togglePersonsHandler}>Toggle Persons</button>
         {persons}
       </div>
     );
